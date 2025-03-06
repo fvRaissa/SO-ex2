@@ -19,15 +19,19 @@ public class Main {
 			switch (opc) {
 			case 1:
 				killController.listaProcessos();
+				break;
 			case 2:
 				System.out.println("Digite o PID do processo que deseja matar:");
 				pid = in.next();
 				killController.mataPid(pid);
-				
+				break;
 			case 3:
 				System.out.println("Digite o nome do processo que deseja matar:");
 				nome = in.next();
 				killController.mataNome(nome);
+				break;
+			case 9:
+				System.exit(0);
 			}
 		}while(opc != 9);
 		
